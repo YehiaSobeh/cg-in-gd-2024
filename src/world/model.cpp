@@ -1,3 +1,5 @@
+#define TINYOBJLOADER_IMPLEMENTATION
+
 #include "model.h"
 
 #include "utils/error_handler.h"
@@ -59,7 +61,6 @@ void model::allocate_buffers(const std::vector<tinyobj::shape_t>& shapes)
 		}
 		vertex_buffers.push_back(std::make_shared<cg::resource<cg::vertex>>(vertex_buffer_size));
 		index_buffers.push_back(std::make_shared<cg::resource<unsigned int>>(index_buffer_size));
-
 
 	}
 	textures.resize(shapes.size());
